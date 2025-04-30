@@ -111,11 +111,19 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateTimer() {
-    const min = Math.floor(timeLeft / 60)
-      .toString()
-      .padStart(2, "0");
-    const sec = (timeLeft % 60).toString().padStart(2, "0");
-    timerElement.textContent = `${min}:${sec}`;
+    let minutes = Math.floor(timeLeft / 60);
+    let seconds = timeLeft % 60;
+
+    if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+
+    if (seconds < 10) {
+      seconds = "0" + seconds;
+    }
+
+    let timeStr = minutes + ":" + seconds;
+    timerElement.textContent = timeStr;
   }
 
   function endGame(won) {
