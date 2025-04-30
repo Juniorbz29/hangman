@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multilingual Hangman</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="header">
+        <div class="timer">Time: <span id="timer">02:00</span></div>
+        <div class="round">Round: <span id="round">1</span>/3</div>
+        <select id="language" class="language-select">
+          <option value="en">English</option>
+          <option value="es">Spanish</option>
+        </select>
+      </div>
+
+      <div class="hangman-container">
+        <canvas id="hangman" width="300" height="300"></canvas>
+      </div>
+
+      <div id="word-container" class="word-container"></div>
+
+      <div class="keyboard">
+        <div class="keyboard-row">
+          <button data-key="A">A</button>
+          <button data-key="B">B</button>
+          <button data-key="C">C</button>
+          <button data-key="D">D</button>
+          <button data-key="E">E</button>
+          <button data-key="F">F</button>
+          <button data-key="G">G</button>
+          <button data-key="H">H</button>
+          <button data-key="I">I</button>
+          <button data-key="J">J</button>
+        </div>
+        <div class="keyboard-row">
+          <button data-key="K">K</button>
+          <button data-key="L">L</button>
+          <button data-key="M">M</button>
+          <button data-key="N">N</button>
+          <button data-key="O">O</button>
+          <button data-key="P">P</button>
+          <button data-key="Q">Q</button>
+          <button data-key="R">R</button>
+        </div>
+        <div class="keyboard-row">
+          <button data-key="S">S</button>
+          <button data-key="T">T</button>
+          <button data-key="U">U</button>
+          <button data-key="V">V</button>
+          <button data-key="W">W</button>
+          <button data-key="X">X</button>
+          <button data-key="Y">Y</button>
+          <button data-key="Z">Z</button>
+        </div>
+      </div>
+
+      <button id="start-btn" class="start-button">Start Game</button>
+      <div id="message" class="message"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.game-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.timer,
+.round {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.language-select {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.hangman-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.word-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  min-height: 50px;
+}
+
+.letter {
+  width: 40px;
+  height: 40px;
+  border-bottom: 3px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.keyboard button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.keyboard button:hover {
+  background-color: #d0d0d0;
+}
+
+.keyboard button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.keyboard button.correct {
+  background-color: #4caf50;
+  color: white;
+}
+
+.keyboard button.wrong {
+  background-color: #f44336;
+  color: white;
+}
+
+.start-button {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.start-button:hover {
+  background-color: #45a049;
+}
+
+.message {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  min-height: 30px;
+}
+
+.message.error {
+  color: #f44336;
+}
+
+.message.success {
+  color: #4caf50;
+}
